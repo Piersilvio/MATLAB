@@ -1,0 +1,10 @@
+clc;
+f = @(x) x^3 - x - 1;
+f_primo = @(x) 3*x^2 - 1;
+tol = 1e-9;
+n = 100;
+x0 = 1;
+[xk, r, i] = metodo15_newton(f, x0, f_primo, tol, n);
+fprintf("soluzione: %f\n", xk);
+fprintf("residuo: %f\n", r);
+fprintf("iterate: %d\n", i);
